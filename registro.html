@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🐱 Gato Volador | Juegos de Mesa</title>
+    <link href="css/boostrap.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="js/popper.min.js" ></script>
+    <script src="js/boostrap.min.js" ></script>
+
+</head>
+<body class="d-flex-column">
+    <header class="bg-white py-3">
+        <div class="container">
+            <h1 class="text-center">🐱 Registro</h1>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link " href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active">Registro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./categorias/dados.html">Dados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./categorias/fichas.html">Fichas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./categorias/cartas.html">Cartas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./categorias/rol.html">Rol</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main lass="d-flex justify-content-center align-items-center vh-100">
+        <div class="container" style="max-width: 500px;">
+            <h2 class="text-center">Formulario de Registro</h2>
+            <form id="guardar" class="needs-validation" novalidate>
+                <div class="mb-3">
+                    <label for="nombreCompleto" class="form-label">Nombre Completo</label>
+                    <input type="text" class="form-control" id="nombreCompleto" required>
+                    <div class="invalid-feedback">Este campo es obligatorio.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="nombreUsuario" class="form-label">Nombre de Usuario</label>
+                    <input type="text" class="form-control" id="nombreUsuario" required>
+                    <div class="invalid-feedback">Este campo es obligatorio.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="correo" class="form-label">Correo Electrónico</label>
+                    <input type="email" class="form-control" id="correo" required>
+                    <div class="invalid-feedback">Ingresa un correo válido.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="clave" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="clave" required minlength="6" maxlength="18">
+                    <div class="invalid-feedback">La contraseña debe tener entre 6 y 18 caracteres, incluir un número y una letra mayúscula.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="repetirClave" class="form-label">Repetir Contraseña</label>
+                    <input type="password" class="form-control" id="repetirClave" required>
+                    <div class="invalid-feedback">Las contraseñas deben coincidir.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="fechaNacimiento" class="form-label">Fecha de Nacimiento</label>
+                    <input type="date" class="form-control" id="fechaNacimiento" required>
+                    <div class="invalid-feedback">Debes tener al menos 13 años para registrarte.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="direccion" class="form-label">Dirección de Despacho (Opcional)</label>
+                    <input type="text" class="form-control" id="direccion">
+                </div>
+                
+                <div class="d-flex justify-content-between">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="reset" class="btn btn-secondary">Limpiar</button>
+                </div>
+            </form>
+        </div>
+        
+        <script>
+            function validarEdad(fechaNacimiento) {
+                const hoy = new Date();
+                const fechaNac = new Date(fechaNacimiento);
+                const edad = hoy.getFullYear() - fechaNac.getFullYear();
+                const mes = hoy.getMonth() - fechaNac.getMonth();
+                return edad > 13;
+            }
+    
+            function validarContrasena(contrasena) {
+                return /[A-Z]/.test(contrasena) && /\d/.test(contrasena);
+            }
+    
+            document.getElementById("guardar").addEventListener("submit", function (event) {
+                event.preventDefault();
+                event.stopPropagation();
+                const form = event.target;
+                const clave = document.getElementById("clave");
+                const repetirClave = document.getElementById("repetirClave");
+                const fechaNacimiento = document.getElementById("fechaNacimiento");
+    
+                let valid = form.checkValidity();
+                if (clave.value !== repetirClave.value) {
+                    repetirClave.setCustomValidity("Las contraseñas no coinciden.");
+                    valid = false;
+                } else {
+                    repetirClave.setCustomValidity("");
+                }
+    
+                if (!validarEdad(fechaNacimiento.value)) {
+                    fechaNacimiento.setCustomValidity("Debes tener al menos 13 años.");
+                    valid = false;
+                } else {
+                    fechaNacimiento.setCustomValidity("");
+                }
+    
+                if (!validarContrasena(clave.value)) {
+                    clave.setCustomValidity("La contraseña debe incluir al menos un número y una letra mayúscula.");
+                    valid = false;
+                } else {
+                    clave.setCustomValidity("");
+                }
+    
+                if (valid) {
+                    form.classList.add("was-validated");
+                    alert("Formulario enviado con éxito.");
+                    form.submit();
+                } else {
+                    form.classList.add("was-validated");
+                }
+            });
+        </script>
+    </main>
+    
+    <footer class="text-center py-3">
+        <p>© 2024 🐱Gato Volador | Juegos de Mesa. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>

@@ -3,53 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dados</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>🐱 Gato Volador | Juegos de Mesa</title>
+    <link href="../css/boostrap.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <script src="../js/popper.min.js" ></script>
+    <script src="../js/boostrap.min.js" ></script>
+
 </head>
-<body>
-    <header>
-        <h1>Dados </h1>
-        <nav>
-            <a href="../index.html">Volver al inicio</a>
-        </nav>
+<body class="d-flex-column">
+    <header class="bg-white py-3">
+        <div class="container">
+            <h1 class="text-center">🐱 Dados</h1>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link " href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../registro.html">Registro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" >Dados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="fichas.html">Fichas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cartas.html">Cartas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="rol.html">Rol</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
-    <section>
-
-        <article>
-            <img src="../img/hex.png">
-            <h2>Hex Roller</h2>
-            <p>Hex Holler es un Roll & Write en el que tendremos que optimizar nuestra hoja escribiendo números..</p>
-            <p>Precio: $8.990</p>
-            <p>Descuento: Sí</p>
-        </article>
-
-         <article>
-            <img src="../img/qwixx.png">
-            <h2>Qwixx</h2>
-            <p>En Qwixx no hay tiempos de espera! Cuando alguien tira los dados, todos pueden ganar puntos. Mientras más números marques, más puntos obtendrás al final de la partida.</p>
-            <p>Precio: $12.990</p>
-            <p>Descuento: Sí</p>
-        </article>
-
-        <article>
-            <img src="../img/stockpile.png">
-            <h2>Stockpile</h2>
-            <p>"Stockpile" es un juego de mesa de economía que combina la estrategia de inversión tradicional de comprar bajo, vender alto con varios mecanismos adicionales para crear una experiencia rápida, atractiva e interactiva.</p>
-            <p>Precio: $63.990</p>
-            <p>Descuento: Sí</p>
-        </article>
-
-        <article>
-            <img src="../img/mona.png">
-            <h2>Monasterium </h2>
-            <p>A principios de la Edad Media, en pleno apogeo del poder eclesiástico, se construyeron al menos cinco monasterios en un hermoso valle, designados para difundir la Palabra de Dios. Como decano de una de las principales escuelas catedralicias del país, intentarás acomodar a los novicios que te han confiado en los puestos de mayor relevancia de cada monasterio para que tu escuela gane en prestigio e influencia. .</p>
-            <p>Precio: $59.990</p>
-            <p>Descuento: Sí</p>
-        </article>
-
-    </section>
-    <footer>
+    <main class="container">
+        <section class="row">
+            
+                <div class="col card">
+                    <img src="../img/hex.png" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title">Hex Roller</h5>
+                        <p class="card-text">Hex Holler es un Roll & Write en el que tendremos que optimizar nuestra hoja escribiendo números.</p>
+                        <p class="card-text"><strong>Precio:</strong> $8.990</p>
+                        <p class="card-text"><strong>Descuento:</strong> Sí</p>
+                    </div>
+                </div>
+            
+                <div class="col card">
+                    <img src="../img/qwixx.png" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title">Qwixx</h5>
+                        <p class="card-text">En Qwixx no hay tiempos de espera! Cuando alguien tira los dados, todos pueden ganar puntos. Mientras más números marques, más puntos obtendrás al final de la partida.</p>
+                        <p class="card-text"><strong>Precio:</strong> $12.990</p>
+                        <p class="card-text"><strong>Descuento:</strong> Sí</p>
+                    </div>
+                </div>
+            
+                <div class="col card">
+                    <img src="../img/stockpile.png" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title">Stockpile</h5>
+                        <p class="card-text">"Stockpile" es un juego de mesa de economía que combina la estrategia de inversión tradicional de comprar bajo, vender alto con varios mecanismos adicionales para crear una experiencia rápida, atractiva e interactiva.</p>
+                        <p class="card-text"><strong>Precio:</strong> $63.990</p>
+                        <p class="card-text"><strong>Descuento:</strong> Sí</p>
+                    </div>
+                </div>
+            
+                <div class="col card">
+                    <img src="../img/mona.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Monasterium</h5>
+                        <p class="card-text">A principios de la Edad Media, en pleno apogeo del poder eclesiástico, se construyeron al menos cinco monasterios en un hermoso valle, designados para difundir la Palabra de Dios. Como decano de una de las principales escuelas catedralicias del país, intentarás acomodar a los novicios que te han confiado en los puestos de mayor relevancia de cada monasterio para que tu escuela gane en prestigio e influencia.</p>
+                        <p class="card-text"><strong>Precio:</strong> $59.990</p>
+                        <p class="card-text"><strong>Descuento:</strong> Sí</p>
+                    </div>
+                </div>
+    
+        </section>
+    </main>
+    
+    <footer class="text-center py-3">
         <p>© 2024 🐱Gato Volador | Juegos de Mesa. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>

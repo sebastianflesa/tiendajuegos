@@ -3,53 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rol</title>
-    <link rel="stylesheet" href="../styles.css">
+    <title>🐱 Gato Volador | Juegos de Mesa</title>
+    <link href="../css/boostrap.min.css" rel="stylesheet">
+    <link href="../styles.css" rel="stylesheet">
+    <script src="../js/popper.min.js" ></script>
+    <script src="../js/boostrap.min.js" ></script>
+
 </head>
-<body>
-    <header>
-        <h1>Rol </h1>
-        <nav>
-            <a href="../index.html">Volver al inicio</a>
-        </nav>
+<body class="d-flex-column">
+    <header class="bg-white py-3">
+        <div class="container">
+            <h1 class="text-center">🐱 Cartas</h1>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link " href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../registro.html">Registro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="dados.html">Dados</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="fichas.html">Fichas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="cartas.html">Cartas</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active">Rol</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
     </header>
-    <section>
-
-        <article>
-            <img src="../img/broma.png">
-            <h2>La Broma Macabrar</h2>
-            <p>Álex de la Iglesia (director, guionista y productor cinematográfico, además de veterano rolero) nos da su versión personal de La llamada de Cthulhu en los locos años 20 con esta aventura en la que los investigadores dispondrán de dos días para detener los fenómenos inexplicables que acosan el hotel más lujoso de El Cairo..</p>
-            <p>Precio: $39.990</p>
-            <p>Descuento: Sí</p>
-        </article>
-
-         <article>
-            <img src="../img/marvel.png">
-            <h2>Marvel Champions</h2>
-            <p>El juego de cartas es un Living Card Game® cooperativo que los invita a encarnar a los superhéroes más emblemáticos del mundo.</p>
-            <p>Precio: $12.990</p>
-            <p>Descuento: Sí</p>
-        </article>
-
-        <article>
-            <img src="../img/starwars.png">
-            <h2>Star Wars Juego de Rol</h2>
-            <p>La Caja de inicio de Star Wars: Al Filo del Imperio contiene una aventura completa que se desarrolla progresivamente para que los jugadores asimilen los fundamentos del sistema de juego sobre la marcha. .</p>
-            <p>Precio: $24.990</p>
-            <p>Descuento: Sí</p>
-        </article>
-
-        <article>
-            <img src="../img/mona.png">
-            <h2>Monasterium </h2>
-            <p>A principios de la Edad Media, en pleno apogeo del poder eclesiástico, se construyeron al menos cinco monasterios en un hermoso valle, designados para difundir la Palabra de Dios. Como decano de una de las principales escuelas catedralicias del país, intentarás acomodar a los novicios que te han confiado en los puestos de mayor relevancia de cada monasterio para que tu escuela gane en prestigio e influencia. .</p>
-            <p>Precio: $59.990</p>
-            <p>Descuento: Sí</p>
-        </article>
-
-    </section>
-    <footer>
+    <main class="container">
+        <section class="row">
+            
+                <div class="col card">
+                    <img src="../img/broma.png" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title">La Broma Macabrar</h5>
+                        <p class="card-text">Álex de la Iglesia (director, guionista y productor cinematográfico, además de veterano rolero) nos da su versión personal de La llamada de Cthulhu en los locos años 20 con esta aventura en la que los investigadores dispondrán de dos días para detener los fenómenos inexplicables que acosan el hotel más lujoso de El Cairo.</p>
+                        <p class="card-text"><strong>Precio:</strong> $39.990</p>
+                        <p class="card-text"><strong>Descuento:</strong> Sí</p>
+                    </div>
+                </div>
+            
+                <div class="col card">
+                    <img src="../img/marvel.png" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title">Marvel Champions</h5>
+                        <p class="card-text">El juego de cartas es un Living Card Game® cooperativo que los invita a encarnar a los superhéroes más emblemáticos del mundo.</p>
+                        <p class="card-text"><strong>Precio:</strong> $12.990</p>
+                        <p class="card-text"><strong>Descuento:</strong> Sí</p>
+                    </div>
+                </div>
+            
+                <div class="col card">
+                    <img src="../img/starwars.png" class="card-img-top" >
+                    <div class="card-body">
+                        <h5 class="card-title">Star Wars Juego de Rol</h5>
+                        <p class="card-text">La Caja de inicio de Star Wars: Al Filo del Imperio contiene una aventura completa que se desarrolla progresivamente para que los jugadores asimilen los fundamentos del sistema de juego sobre la marcha.</p>
+                        <p class="card-text"><strong>Precio:</strong> $24.990</p>
+                        <p class="card-text"><strong>Descuento:</strong> Sí</p>
+                    </div>
+                </div>
+            
+                <div class="col card">
+                    <img src="../img/mona.png" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Monasterium</h5>
+                        <p class="card-text">A principios de la Edad Media, en pleno apogeo del poder eclesiástico, se construyeron al menos cinco monasterios en un hermoso valle, designados para difundir la Palabra de Dios. Como decano de una de las principales escuelas catedralicias del país, intentarás acomodar a los novicios que te han confiado en los puestos de mayor relevancia de cada monasterio para que tu escuela gane en prestigio e influencia.</p>
+                        <p class="card-text"><strong>Precio:</strong> $59.990</p>
+                        <p class="card-text"><strong>Descuento:</strong> Sí</p>
+                    </div>
+                </div>
+    
+        </section>
+    </main>
+    
+    <footer class="text-center py-3">
         <p>© 2024 🐱Gato Volador | Juegos de Mesa. Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
